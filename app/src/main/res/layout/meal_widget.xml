@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin"
+    android:id="@+id/parentLayout"
+    android:background="@drawable/nott_background">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/loading_layout">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/union_red"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/data_layout">
+        <TextView
+            android:id="@+id/cashTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+            style="@style/BigWidgetText"
+            android:layout_centerHorizontal="true"
+            android:text="$192.4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="100"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/swipesTextView"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="75"
+                style="@style/BigWidgetText"
+                android:textSize="35sp"
+                android:text="6" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/guestSwipesTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="top"-->
+            <!--android:paddingTop="4dp"-->
+            <!--style="@style/SmallWidgetText"-->
+            <!--android:textSize="15sp"-->
+            <!--android:text="+4" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/data_layout">-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/cashTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:gravity="center"-->
+
+            <!--style="@style/BigWidgetText"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:text="$192.4" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:weightSum="100"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:gravity="left"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/swipesTextView"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_weight="65"-->
+                <!--style="@style/BigWidgetText"-->
+                <!--android:textSize="35sp"-->
+                <!--android:text="6" />-->
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/guestSwipesTextView"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="top"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:paddingTop="4dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;style="@style/SmallWidgetText"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="15sp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="+4" />&ndash;&gt;-->
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/refresh_button"
+        android:src="@drawable/ic_menu_refresh"/>
+
+</RelativeLayout>
